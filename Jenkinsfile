@@ -11,7 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'echo "Tests passed!"'
+	         sh 'echo "Tests passed!"'
+		sh 'docker run --rm myapp:latest'
             }
         }
         stage('Deploy') {
